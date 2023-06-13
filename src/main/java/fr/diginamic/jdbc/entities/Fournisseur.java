@@ -1,12 +1,37 @@
 package fr.diginamic.jdbc.entities;
 
-public class Fournisseur {
+import fr.diginamic.jdbc.dao.FournisseurDAO;
+
+import java.util.List;
+
+public class Fournisseur implements FournisseurDAO {
     private int id;
     private String nom;
 
     public Fournisseur(int id, String nom) {
         this.id = id;
         this.nom = nom;
+    }
+
+
+    @Override
+    public List<Fournisseur> extraire() {
+        return null;
+    }
+
+    @Override
+    public int update(String ancienNom, String nouveauNom) {
+        return 0;
+    }
+
+    @Override
+    public boolean delete(Fournisseur fournisseur) {
+        return false;
+    }
+
+    @Override
+    public void insert(Fournisseur fournisseur) {
+
     }
 
     public int getId() {

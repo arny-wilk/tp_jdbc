@@ -4,26 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Fournisseur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/AppTest.java" afterDir="false" />
+    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_3 Exercice CRUD">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/AppJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Fournisseur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="JUnit3 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -49,98 +42,123 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.TestSelect">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.App" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.diginamic.jdbc.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FournisseurDaoJdbcTest.testDelete">
+    <configuration name="FournisseurDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDelete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.TestDelete" />
+    <configuration name="FournisseurDaoJdbcTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.entities.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestInsertion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.TestInsertion" />
+    <configuration name="FournisseurDaoJdbcTest.testExtraire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.entities.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testExtraire" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSelect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.entities.TestSelect" />
+    <configuration name="FournisseurDaoJdbcTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.entities.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUpdate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.TestUpdate" />
+    <configuration name="FournisseurDaoJdbcTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.entities.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestSelect" />
-        <item itemvalue="Application.TestDelete" />
-        <item itemvalue="Application.TestUpdate" />
-        <item itemvalue="Application.TestInsertion" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testDelete" />
+        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testUpdate" />
+        <item itemvalue="JUnit.FournisseurDaoJdbcTest" />
+        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testInsert" />
+        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testExtraire" />
       </list>
     </recent_temporary>
   </component>
@@ -157,9 +175,21 @@
       <workItem from="1686600376086" duration="99000" />
       <workItem from="1686600525525" duration="81000" />
     </task>
+    <task id="LOCAL-00001" summary="TP_3 Exercice CRUD">
+      <created>1686648194955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686648194956</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TP_3 Exercice CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP_3 Exercice CRUD" />
   </component>
 </project>
