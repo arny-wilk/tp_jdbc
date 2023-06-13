@@ -19,12 +19,12 @@ public class AppJdbc {
         extracted();
 
         // Insertion
-        insertion();
+        insertion(new Fournisseur(4, "L'Espace Création"));
 
         // Update
-        update();
+        update("L Espace Création", "Espace création");
         // Delete
-        delete();
+        delete(new Fournisseur(4, "Espace Création"));
     }
 
     private static void extracted() {
@@ -37,25 +37,25 @@ public class AppJdbc {
         }
     }
 
-    private static void insertion() {
+    private static void insertion(Fournisseur fournisseur) {
         try {
-            jdbcOperations.insert(new Fournisseur(4, "L'Espace Création"));
+            jdbcOperations.insert(fournisseur);
         } catch (Exception e) {
             LOG.debug(e.getMessage());
         }
     }
 
-    private static void update() {
+    private static void update(String ancienNom, String nvxNom) {
         try {
-            jdbcOperations.update("L Espace Création", "Espace création");
+            jdbcOperations.update(ancienNom, nvxNom);
         } catch (Exception e) {
             LOG.debug(e.getMessage());
         }
     }
 
-    private static void delete() {
+    private static void delete(Fournisseur fournisseur) {
         try {
-            jdbcOperations.delete(new Fournisseur(4, "Espace Création"));
+            jdbcOperations.delete(fournisseur);
         } catch (Exception e) {
             LOG.debug(e.getMessage());
         }

@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_3 Exercice CRUD">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/AppJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" afterDir="false" />
+    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_5 PreparedStatement done">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Fournisseur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,31 +39,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.diginamic.jdbc" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="fr.diginamic.jdbc.dao" />
@@ -77,7 +77,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,7 +92,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,7 +108,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +124,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,7 +140,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686648194956</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TP_5 PreparedStatement done">
+      <created>1686671913236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686671913236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TP_3 Exercice CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP_3 Exercice CRUD" />
+    <MESSAGE value="TP_5 PreparedStatement done" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP_5 PreparedStatement done" />
   </component>
 </project>
