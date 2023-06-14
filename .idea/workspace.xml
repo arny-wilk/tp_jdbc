@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_5 PreparedStatement done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcArticles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/ArticleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/articles/ArticleDaoJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/articles/ArticleDaoJdbcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/AppJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcFournisseur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/fournisseurs/FournisseurDaoJdbc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +79,13 @@
       <recent name="fr.diginamic.jdbc" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.diginamic.jdbc.dao.articles" />
       <recent name="fr.diginamic.jdbc.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FournisseurDaoJdbcTest.testDelete">
-    <configuration name="FournisseurDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ArticleDaoJdbcTest.testInsert">
+    <configuration name="TestJdbcArticles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.TestJdbcArticles" />
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
@@ -81,40 +93,53 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FournisseurDaoJdbcTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleDaoJdbcTest.testExtraireArticles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.articles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
-      <option name="METHOD_NAME" value="testDelete" />
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao.articles" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.articles.ArticleDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testExtraireArticles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FournisseurDaoJdbcTest.testExtraire" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticleDaoJdbcTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.articles.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
-      <option name="METHOD_NAME" value="testExtraire" />
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao.articles" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.articles.ArticleDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArticleDaoJdbcTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tp_jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.articles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao.articles" />
+      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.articles.ArticleDaoJdbcTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,7 +149,7 @@
       <module name="tp_jdbc" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
+          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,29 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FournisseurDaoJdbcTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tp_jdbc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
-      <option name="METHOD_NAME" value="testUpdate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testDelete" />
-        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testUpdate" />
-        <item itemvalue="JUnit.FournisseurDaoJdbcTest" />
+        <item itemvalue="JUnit.ArticleDaoJdbcTest.testInsert" />
+        <item itemvalue="JUnit.ArticleDaoJdbcTest.testExtraireArticles" />
+        <item itemvalue="Application.TestJdbcArticles" />
+        <item itemvalue="JUnit.ArticleDaoJdbcTest.testUpdate" />
         <item itemvalue="JUnit.FournisseurDaoJdbcTest.testInsert" />
-        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testExtraire" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686671913236</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="TP_5 PreparedStatement done">
+      <created>1686684786024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686684786024</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

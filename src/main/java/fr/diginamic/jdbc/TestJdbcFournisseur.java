@@ -3,16 +3,16 @@ package fr.diginamic.jdbc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
+import fr.diginamic.jdbc.dao.fournisseurs.FournisseurDaoJdbc;
 import fr.diginamic.jdbc.entities.Fournisseur;
 
 import java.util.List;
 
-public class AppJdbc {
+public class TestJdbcFournisseur {
 
-    private static FournisseurDaoJdbc jdbcOperations = new FournisseurDaoJdbc();
+    private static final FournisseurDaoJdbc jdbcOperations = new FournisseurDaoJdbc();
 
-    private static final Logger LOG = LoggerFactory.getLogger(fr.diginamic.jdbc.TestInsertion.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TestJdbcFournisseur.class);
 
     public static void main(String[] args) {
         // Extraction
@@ -23,12 +23,13 @@ public class AppJdbc {
 
         // Update
         update("L Espace Création", "Espace création");
+
         // Delete
         delete(new Fournisseur(4, "Espace Création"));
     }
 
     private static void extracted() {
-        List<Fournisseur> extraire = null;
+        List<Fournisseur> extraire;
         try {
             extraire = jdbcOperations.extraire();
             extraire.forEach(System.out::println);

@@ -1,6 +1,6 @@
 package fr.diginamic.jdbc.entities;
 
-import fr.diginamic.jdbc.dao.FournisseurDaoJdbc;
+import fr.diginamic.jdbc.dao.fournisseurs.FournisseurDaoJdbc;
 
 import java.util.List;
 

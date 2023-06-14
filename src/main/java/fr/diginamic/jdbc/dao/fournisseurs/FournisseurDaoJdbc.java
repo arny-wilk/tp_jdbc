@@ -1,5 +1,6 @@
-package fr.diginamic.jdbc.dao;
+package fr.diginamic.jdbc.dao.fournisseurs;
 
+import fr.diginamic.jdbc.dao.FournisseurDAO;
 import fr.diginamic.jdbc.entities.Fournisseur;
 
 import java.sql.Connection;
@@ -14,6 +15,7 @@ import java.util.ResourceBundle;
 public class FournisseurDaoJdbc implements FournisseurDAO {
 
     private static final String SECURED_QUERY = "INSERT INTO FOURNISSEUR (ID, NOM) VALUES (?, ?)";
+    private static final String SELECT_QUERY = "SELECT * FROM FOURNISSEUR";
     private static final String SECURED_DELETE = "DELETE FROM FOURNISSEUR WHERE NOM= ?";
     private static final String SECURED_UPDATE = "UPDATE FOURNISSEUR SET NOM = ? WHERE NOM= ?";
     private static final String URL_DB;
@@ -32,8 +34,8 @@ public class FournisseurDaoJdbc implements FournisseurDAO {
     public List<Fournisseur> extraire() throws Exception {
         List<Fournisseur> fournisseurs = new ArrayList<>();
         try (Connection cnx = DriverManager.getConnection(URL_DB, USER_DB, PASSWORD_DB);
-             Statement select = cnx.createStatement();) {
-            ResultSet curseur = select.executeQuery("SELECT * FROM FOURNISSEUR");
+             Statement select = cnx.createStatement()) {
+            ResultSet curseur = select.executeQuery(SELECT_QUERY);
             while (curseur.next()) {
                 Integer id = curseur.getInt("ID");
                 String nom = curseur.getString("NOM");
