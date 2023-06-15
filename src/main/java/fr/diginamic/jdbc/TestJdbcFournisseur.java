@@ -19,7 +19,8 @@ public class TestJdbcFournisseur {
         extracted();
 
         // Insertion
-        insertion(new Fournisseur(4, "L'Espace Création"));
+        // insertion(new Fournisseur(4, "L'Espace Création"));
+        insertion(new Fournisseur(4, "La Maison de la Peinture"));
 
         // Update
         update("L Espace Création", "Espace création");

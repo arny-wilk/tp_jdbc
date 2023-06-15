@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_5 PreparedStatement done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcArticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/ArticleDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/articles/ArticleDaoJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/articles/ArticleDaoJdbcTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="699064d4-4acc-4624-9418-b643d220675f" name="Changes" comment="TP_6 done">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/AppJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcFournisseur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestInsertion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/dao/fournisseurs/FournisseurDaoJdbc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fr/diginamic/jdbc/dao/FournisseurDaoJdbcTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcFournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestJdbcFournisseur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/entities/TestSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/diginamic/jdbc/TestSelect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +56,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,7 +72,20 @@
       <recent name="fr.diginamic.jdbc.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArticleDaoJdbcTest.testInsert">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.App" />
+      <module name="tp_jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestJdbcArticles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.TestJdbcArticles" />
       <module name="tp_jdbc" />
@@ -145,29 +147,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FournisseurDaoJdbcTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tp_jdbc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.diginamic.jdbc.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.diginamic.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="fr.diginamic.jdbc.dao.FournisseurDaoJdbcTest" />
-      <option name="METHOD_NAME" value="testInsert" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.ArticleDaoJdbcTest.testInsert" />
         <item itemvalue="JUnit.ArticleDaoJdbcTest.testExtraireArticles" />
         <item itemvalue="Application.TestJdbcArticles" />
         <item itemvalue="JUnit.ArticleDaoJdbcTest.testUpdate" />
-        <item itemvalue="JUnit.FournisseurDaoJdbcTest.testInsert" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +169,8 @@
       <workItem from="1686600275721" duration="53000" />
       <workItem from="1686600376086" duration="99000" />
       <workItem from="1686600525525" duration="81000" />
+      <workItem from="1686810719253" duration="807000" />
+      <workItem from="1686811583246" duration="7220000" />
     </task>
     <task id="LOCAL-00001" summary="TP_3 Exercice CRUD">
       <created>1686648194955</created>
@@ -205,15 +193,34 @@
       <option name="project" value="LOCAL" />
       <updated>1686684786024</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TP_6 done">
+      <created>1686781218051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686781218051</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TP_3 Exercice CRUD" />
     <MESSAGE value="TP_5 PreparedStatement done" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP_5 PreparedStatement done" />
+    <MESSAGE value="TP_6 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="TP_6 done" />
   </component>
 </project>
